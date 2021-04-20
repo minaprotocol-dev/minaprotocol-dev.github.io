@@ -1,4 +1,5 @@
 var startDate = new Date("Thu, 22 Apr 2021 00:00:00 UTC");
+var timeEndDate = new Date("Wed, 21 Apr 2021 00:00:00 UTC");
 
 var registerActive = false;
 var subscribeActive = false;
@@ -26,7 +27,7 @@ function updateTime() {
 
 function updateCount(){
     var currentDate = new Date().getTime();
-    var currentCount = Math.floor((startDate - currentDate) / 1000 * 300);
+    var currentCount = Math.floor((timeEndDate - currentDate) / 1000);
     $('#countOfTokens').text(currentCount);
 
 }
@@ -36,7 +37,7 @@ $(window).ready(function(){
     updateTime();
     updateCount();
     TimeTiming = setInterval(updateTime, 1000);
-    CountTiming = setInterval(updateCount, 5000);
+    CountTiming = setInterval(updateCount, 3000);
  });
 
 function copyFunc(id){
