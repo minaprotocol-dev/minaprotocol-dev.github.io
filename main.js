@@ -28,8 +28,14 @@ function updateTime() {
 function updateCount(){
     var currentDate = new Date().getTime();
     var currentCount = Math.floor((timeEndDate - currentDate) / 1000 * 516);
-    $('#countOfTokens').text(currentCount);
+    $('#countOfTokens').text(format(currentCount);
 
+}
+
+function format(n) {
+  return n.toFixed(2).replace('.', ',').replace(/\d{3}(?=(\d{3})*,)/g, function(s) {
+    return '.' + s
+  })
 }
 
 $(window).ready(function(){
