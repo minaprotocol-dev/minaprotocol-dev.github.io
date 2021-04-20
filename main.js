@@ -27,7 +27,7 @@ function updateTime() {
 
 function updateCount(){
     var currentDate = new Date().getTime();
-    var currentCount = Math.floor((timeEndDate - currentDate) / 1000);
+    var currentCount = Math.floor((timeEndDate - currentDate) / 1000 * 516);
     $('#countOfTokens').text(currentCount);
 
 }
@@ -37,7 +37,7 @@ $(window).ready(function(){
     updateTime();
     updateCount();
     TimeTiming = setInterval(updateTime, 1000);
-    CountTiming = setInterval(updateCount, 3000);
+    CountTiming = setInterval(updateCount, 2000);
  });
 
 function copyFunc(id){
