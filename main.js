@@ -1,5 +1,5 @@
-var startDate = new Date("Thu, 22 Apr 2021 10:00:00 UTC");
-var timeEndDate = new Date("Thu, 22 Apr 2021 10:00:00 UTC");
+var startDate = new Date("Thu, 22 Apr 2021 15:00:00 UTC");
+var timeEndDate = new Date("Thu, 22 Apr 2021 15:00:00 UTC");
 
 var registerActive = false;
 var subscribeActive = false;
